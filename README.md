@@ -12,7 +12,7 @@
 
 You have finally discovered my Github profile. <br>
 Please feel free to clone/fork projects, raise issues and submit PRs if you think something could be better. <br>
-<!-- Ask me anything <a href="https://github.com/ABSphreak/ABSphreak/issues/new"><b>here</b></a><br> -->
+Ask me anything <a href="https://github.com/KabilanMA/KabilanMA/issues/new"><b>here</b></a><br>
 or <a href="mailto:kabilanen@gmail.com"><b>email</b></a> me
 
 <i>Happy Coding!</i> 😊
@@ -22,23 +22,20 @@ or <a href="mailto:kabilanen@gmail.com"><b>email</b></a> me
 <div align="center">
 
 <img align="center" src="https://github-readme-stats.vercel.app/api?username=KabilanMA&include_all_commits=true&count_private=true&show_icons=true&line_height=20&title_color=7A7ADB&icon_color=2234AE&text_color=D3D3D3&bg_color=0,000000,130F40" alt="Kabilan's Github Stats">
-
-</br>
-</br>
+<br>
+<br>
+  
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KabilanMA&layout=compact)](https://github.com/KabilanMA/github-readme-stats)
+  
+<br>
+<br>
 <i>Random dev joke for you! (create your own by clicking here ↓)</i><br>
 <br>
 <a href="https://readme-jokes.vercel.app"><img align="center" src="https://readme-jokes.vercel.app/api" alt="README Jokes"></a>
 
----
-[![HitCount](https://hits.dwyl.com/KabilanMA/KabilanMA.svg?style=flat-square)](http://hits.dwyl.com/KabilanMA/KabilanMA)
+<br>
 
 <i>Follow me around the web:</i><br>
-
-  <!-- <a target="_blank" href="https://www.linkedin.com/in/absphreak/">🇱​🇮​🇳​🇰​🇪​🇩​🇮​🇳​</a> ●
-  <a target="_blank" href="https://www.instagram.com/absphreak/">🇮​🇳​🇸​🇹​🇦​🇬​🇷​🇦​🇲​</a> ●
-  <a target="_blank" href="https://www.facebook.com/originalphreak/">🇫​🇦​🇨​🇪​🇧​🇴​🇴​🇰​</a> ●
-  <a target="_blank" href="https://open.spotify.com/user/0170agi99s5hh187g7mtz245b">🇸​🇵​🇴​🇹​🇮​🇫​🇾​</a>
-  <a target="_blank" href="https://dev.to/ABSphreak">🇸​🇵​🇴​🇹​🇮​🇫​🇾​</a> -->
 
 <a href="https://www.linkedin.com/in/kabilan-mahathevan-a862441aa/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 <a href="https://www.instagram.com/kabilan.mahathevan/" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?&style=flat-square&logo=instagram&logoColor=white" alt="Instagram"></a>
