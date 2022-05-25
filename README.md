@@ -31,7 +31,7 @@ or <a href="mailto:kabilanen@gmail.com"><b>email</b></a> me
 <br>
 <i>Random dev joke for you! (create your own by clicking here ↓)</i><br>
 <br>
-<a href="https://readme-jokes.vercel.app"><img align="center" src="https://readme-jokes.vercel.app/api" alt="README Jokes"></a>
+<img align="center" src="https://readme-jokes.vercel.app/api" alt="README Jokes">
 
 <br>
 
