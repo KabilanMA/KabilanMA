@@ -4,7 +4,7 @@
 
 <div align="center" width="50">
 
-<img src="https://user-images.githubusercontent.com/84805141/166402849-92f06472-f16f-4afa-9668-97ce43996db8.gif" alt="Welcome!" width="300"/>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=12F723&center=true&width=435&lines=Hello+.+.+.+;Welcome+to+Kabilan's+GitHub)](https://git.io/typing-svg)
 
 </div>
 
@@ -36,25 +36,12 @@ or <a href="mailto:kabilanen@gmail.com"><b>email</b></a> me
 <br>
 
 <i>Follow me around the web:</i><br>
+![](https://komarev.com/ghpvc/?username=KabilanMA&color=blueviolet&label=Account+Peeks)
 
 <a href="https://www.linkedin.com/in/kabilan-mahathevan-a862441aa/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 <a href="https://www.instagram.com/kabilan.mahathevan/" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?&style=flat-square&logo=instagram&logoColor=white" alt="Instagram"></a>
 <a href="https://www.facebook.com/mahathevan.kabilan" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>
 
 </div>
-
-<!--
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
 
 -----
