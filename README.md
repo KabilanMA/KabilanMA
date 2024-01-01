@@ -24,10 +24,11 @@ or <a href="mailto:kabilanen@gmail.com"><b>email</b></a> me
 <br>
   
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KabilanMA&layout=compact&title_color=7A7ADB&icon_color=2234AE&text_color=D3D3D3&bg_color=0,000000,130F40)](https://github.com/KabilanMA/github-readme-stats)
-  
+
+![Kabilan's github stats](https://github-readme-stats.vercel.app/api?username=kabilanma&show_icons=true&theme=tokyonight)
+
 <br>
-<br>
-<i>Random dev joke for you! (create your own by clicking here ↓)</i><br>
+<i>Random dev joke for you!</i><br>
 <br>
 <img align="center" src="https://readme-jokes.vercel.app/api" alt="README Jokes">
 
@@ -39,6 +40,8 @@ or <a href="mailto:kabilanen@gmail.com"><b>email</b></a> me
 <a href="https://www.linkedin.com/in/kabilan-mahathevan-a862441aa/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 <a href="https://www.instagram.com/kabilan.mahathevan/" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?&style=flat-square&logo=instagram&logoColor=white" alt="Instagram"></a>
 <a href="https://www.facebook.com/mahathevan.kabilan" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>
+[![Kabilan's Porfolio](https://img.shields.io/badge/Website-www-%230769AD.svg?&style=flat-square&logo=www&logoColor=white)](https://kabilan.info)
+
 
 </div>
 
