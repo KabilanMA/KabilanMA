@@ -12,8 +12,6 @@ An extended abstract about Vectorizing Sparse Coiteration was accepted at [ARRAY
 
 I will be presenting the extended abstract, [Vectorizing Sparse Coiteration for Two-finger Loop Structure]((https://pldi26.sigplan.org/details/ARRAY-2026-papers/9/Vectorizing-Sparse-Coiteration-for-Two-finger-Loop-Structure-Extended-Abstract-)), at ARRAY'26.
 
-This work has also been submitted to another conference and is currently under review. We built a technique that utilizes dense block regions in sparse tensor data and leverages available SIMD hardware on the target system, achieving significant speedups for many foundational sparse tensor kernels while keeping any slowdowns within a reasonable range, even for extremely sparse, real-world tensor data.
-
-More details will be released later to maintain double-blind anonymity for the paper currently under review.
+This work has been accepted to PACT 2026 with titled; _Splyce: SIMD Vectorization of Sparse Coiteration_.
 
 ---
