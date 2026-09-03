@@ -4,7 +4,7 @@ require "open3"
 
 # --- CONFIGURATION ---
 REMOTE_USER = "kabilan"
-REMOTE_HOST = "rlogin.cs.vt.edu"
+REMOTE_HOST = "ap1.cs.vt.edu"
 REMOTE_PATH = "/web/people/kabilan/"
 LOCAL_DIR   = "_site/"
 
