@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-The paper [_TENSURE: Fuzzing Sparse Tensor Compilers_](assets/pdf/tensure_fuzzing.pdf) got accepted to Fuzzing'26 (NDSS) 2026. 🪄
+The paper [TENSURE: Fuzzing Sparse Tensor Compilers](assets/pdf/tensure_fuzzing.pdf) got accepted to Fuzzing'26 (NDSS) 2026. 🪄

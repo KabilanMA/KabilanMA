@@ -3,6 +3,20 @@
 
 @string{aps = {American Physical Society,}}
 
+@inproceedings{splyce,
+  author = {Kabilan Mahathevan and Poorna Gunathilaka and Kirshanthan Sundararajah},
+  title = {Splyce: SIMD Vectorization of Sparse Coiteration},
+  publisher = {Association for Computing Machinery},
+  booktitle = {Proceedings of the 35th ACM International Conference on Parallel Processing Techniques and Applications (PACT 2026)},
+  abstract={Sparse tensor contractions are bottlenecked by coiteration loops that resist standard loop vectorization. We present Splyce, an auto-vectorization framework in MLIR that overcomes this through a dual-path execution model. By decoupling coordinate intersection from pointer management via selective predication, Splyce inherently eliminates data-dependent branches as a side-effect, allowing modern superscalar engines to maximize instruction-level parallelism and hide memory latency. Beyond simple branch elimination, our transformation enables high-throughput speculative execution by saturating parallel functional units previously starved by sequential dependencies. Evaluation across foundational sparse tensor kernels demonstrates performance ranging from 1.94× to 2.86× on synthetic inputs, with consistent speedups sustained across a vast majority of irregular real-world datasets from the SuiteSparse collection. Ultimately, Splyce demonstrates that by converting unpredictable control-flow into a predictable data stream, compiler-driven speculation can effectively reconcile the memory efficiency of compressed storage with the execution-unit throughput of modern superscalar architectures.},
+  year = {2026},
+  doi = {...},
+  pdf={},
+  selected = {true},
+  award={Winner, Chameleon Reproducibility Challenge},
+  preview = {splyce.png}
+}
+
 @inproceedings{sqlflex,
   author = {Junwen An and Kabilan Mahathevan and Manuel Rigger},
   title = {Dialect-Agnostic SQL Parsing via LLM-Based Segmentation},
@@ -12,7 +26,7 @@
   doi={https://doi.org/10.1145/3802038},
   year = {2026},
   pdf = {sqlflex.pdf},
-  selected={true}
+  preview={sqlflex.png}
 }
 
 @inproceedings{tensure_report,
@@ -26,7 +40,7 @@
   year={2026},
   pdf={tensure_fuzzing.pdf},
   additional_info   = {. *More Information* can be [found here](https://github.com/KabilanMA/TenSure/)},
-  selected={true}
+  preview={tensure.png}
 }
 
 @inproceedings{bugsinkube,
@@ -35,5 +49,6 @@
   abstract={In the contemporary technological landscape, the widespread adoption of cloud systems and distributed resources has highlighted the need to overcome inherent limitations in achieving complete system dependability. This presents both significant opportunities and challenges in automating bug detection, bug fixing, and verification efforts in complex distributed systems, such as cloud infrastructure management tools like Kubernetes and Twine. Despite the importance of these efforts, there is a notable lack of data that can be used to study and analyze the types of challenges faced in developing and supporting these systems, as well as in building test automation and bug detection tools. To address this gap, we conducted an in-depth investigation into one of the most popular ecosystems: Kubernetes. We manually analyzed reported bugs and curated a comprehensive dataset comprising 311 developer-confirmed bugs. This dataset includes detailed information on bug categories, severity, affected versions, and reproducible steps when available. Through our analysis, we identified an emerging bug type in these systems, referred to as reconciliation bugs. To assist developers and researchers in creating new testing strategies for these platforms, we developed a bug-reproducing script that can reproduce 52 reconciliation bugs out of the 311 total bugs in Kubernetes. This tool provides valuable insights into these issues, facilitating the development of more robust testing and maintenance strategies. The dataset is publicly available and can be accessed at: https:/Igithub.com/EmInReLab/BugsInKube},
   booktitle={31st Asia-Pacific Software Engineering Conference (APSEC)},
   year={2024},
-  pdf={BugsInKube.pdf}
+  pdf={BugsInKube.pdf},
+  preview={bugsinkube.png}
 }

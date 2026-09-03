@@ -823,11 +823,12 @@ footer.sticky-bottom {
         border-color: var(--global-text-color);
       }
     }
-    div.award.hidden {
-      border: dashed 1px var(--global-bg-color);
-    }
-    div.award.hidden.open {
-      border-color: var(--global-highlight-color);
+    div.award-statement {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: normal;
+      font-style: normal;
+      color: var(--global-text-color-light);
     }
   }
 }

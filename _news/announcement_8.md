@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-The paper [_Dialect-Agnostic SQL Parsing via LLM-Based Segmentation_](https://dl.acm.org/doi/abs/10.1145/3802038) has been accepted to SIGMOD 2026. 🪄
+The paper [Dialect-Agnostic SQL Parsing via LLM-Based Segmentation](https://dl.acm.org/doi/abs/10.1145/3802038) has been accepted to SIGMOD 2026. 🪄
