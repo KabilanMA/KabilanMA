@@ -20,4 +20,4 @@ I'm currently focused on sparse tensor computation, where most entries of a tens
 
 If you’re interested in this area or would like to discuss related research, feel free to reach out.
 
-Outside of research, I watch an unhealthy amount of anime.
+Outside of research, I watch an unhealthy amount of anime and play a little badminton!

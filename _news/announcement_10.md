@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I have been awarded with [Pratt Fellowship](https://ece.vt.edu/grad/financialaid/fellowships.html) by the Computer Science Department at Virginia Tech for the 2026–2027 academic year.
+🎖️ I have been awarded with [Pratt Fellowship](https://ece.vt.edu/grad/financialaid/fellowships.html) by the Computer Science Department at Virginia Tech for the 2026–2027 academic year.

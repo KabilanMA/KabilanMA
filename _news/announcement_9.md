@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Our Vectorization for Sparse Coiteration Work has been accepted at ARRAY'26 (Co-located \w PLDI'26)
+title: 🪄 Our Vectorization for Sparse Coiteration Work has been accepted at ARRAY'26 (Co-located \w PLDI'26)
 date: 2026-05-11 15:59:00-0400
 inline: false
 related_posts: false

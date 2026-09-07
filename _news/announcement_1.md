@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started working as Software Engineer at [Sysco LABS](https://syscolabs.lk/)
+🚀 Started working as Software Engineer at [Sysco LABS](https://syscolabs.lk/)

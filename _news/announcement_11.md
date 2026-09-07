@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-The paper _Splyce: SIMD Vectorization of Sparse Coiteration_ got accepted to [PACT 2026](https://pact2026.github.io/index). 🪄
+🪄 Our paper _Splyce: SIMD Vectorization of Sparse Coiteration_ got accepted to [PACT 2026](https://pact2026.github.io/index). 

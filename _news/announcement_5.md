@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Presented a paper in APSEC-2024
+title: 🎤 Presented our paper in APSEC-2024
 date: 2024-12-05 11:59:00-0400
 inline: false
 related_posts: false

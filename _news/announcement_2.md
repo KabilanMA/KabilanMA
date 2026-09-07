@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Started working as Visiting Scholar at NUS.
+title: 🚀 Started working as Visiting Scholar at NUS.
 date: 2024-09-12 16:11:00-0400
 inline: false
 related_posts: false

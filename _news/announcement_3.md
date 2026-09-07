@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-The paper [BugsInKube: A Collection of Reconciliation Bugs](assets/pdf/BugsInKube.pdf) got accepted to APSEC 2024. 🪄
+🪄 Our paper [BugsInKube: A Collection of Reconciliation Bugs](assets/pdf/BugsInKube.pdf) got accepted to APSEC 2024.
