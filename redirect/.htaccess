@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/redirect/index\.html$
+RewriteRule ^(.*)$ https://kabilanma.github.io/KabilanMA/ [R=301,L]
