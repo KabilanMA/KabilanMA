@@ -11,6 +11,10 @@ nav_order: 2
 
 <!-- Bibsearch Feature -->
 
+<div class="alert alert-secondary mt-3" role="alert">
+  PDFs linked below are the author's version of each work, provided for personal, non-commercial use only and not for redistribution. Please refer to the DOI link for the version of record.
+</div>
+
 {% include bib_search.liquid %}
 
 <div class="publications">
