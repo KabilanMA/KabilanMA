@@ -10,7 +10,7 @@ An extended abstract about Vectorizing Sparse Coiteration was accepted at [ARRAY
 
 ---
 
-I will be presenting the extended abstract, [Vectorizing Sparse Coiteration for Two-finger Loop Structure]((https://pldi26.sigplan.org/details/ARRAY-2026-papers/9/Vectorizing-Sparse-Coiteration-for-Two-finger-Loop-Structure-Extended-Abstract-)), at ARRAY'26.
+I will be presenting the extended abstract, [Vectorizing Sparse Coiteration for Two-finger Loop Structure](https://pldi26.sigplan.org/details/ARRAY-2026-papers/9/Vectorizing-Sparse-Coiteration-for-Two-finger-Loop-Structure-Extended-Abstract-), at ARRAY'26.
 
 This work has been accepted to PACT 2026 with titled; _Splyce: SIMD Vectorization of Sparse Coiteration_.
 

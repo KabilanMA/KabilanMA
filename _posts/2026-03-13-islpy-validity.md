@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Polyhedral Compilation Basics - Validating Schedules
-date: 2026-03-29 06:01:00
+date: 2026-12-29 06:01:00
 description: A guide to mathematically verifying loop execution order using the ISL.
 tags: formatting code
 categories: notes
