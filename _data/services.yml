@@ -1,0 +1,38 @@
+# Professional service, grouped by category.
+# Categories are rendered in this order; a category with no entries is hidden,
+# so "Program Committees" will appear automatically once an entry is added.
+# Entries within a category are sorted by year (newest first).
+
+- title: Program Committees
+  entries: []
+  # - venue: OOPSLA'28
+  #   name: ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications
+  #   role: Program Committee Member
+  #   year: 2028
+  #   url: https://...
+
+- title: Artifact Evaluation Committees
+  entries:
+    - venue: POPL'27
+      name: 54th ACM SIGPLAN Symposium on Principles of Programming Languages
+      role: Artifact Evaluation Committee Member
+      year: 2027
+      url: https://popl27.sigplan.org/track/POPL-2027-artifact-evaluation
+    - venue: PPoPP'27
+      name: ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming
+      role: Artifact Evaluation Committee Member
+      year: 2027
+      url: https://ppopp27.sigplan.org/track/PPoPP-2027-artifact-evaluation
+    - venue: FAST'25
+      name: 23rd USENIX Conference on File and Storage Technologies
+      role: Artifact Evaluation Committee Member
+      year: 2025
+      url: https://www.usenix.org/conference/fast25/call-for-artifacts
+
+- title: Mentoring
+  entries:
+    - venue: GSoC'25
+      name: Google Summer of Code 2025
+      role: Mentor, SQLancer
+      year: 2025
+      url: https://summerofcode.withgoogle.com/archive/2025/organizations/sqlancer

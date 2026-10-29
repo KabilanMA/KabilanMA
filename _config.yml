@@ -228,24 +228,22 @@ kramdown:
 include: ["_pages"]
 exclude:
   - bin/
-  - CONTRIBUTING.md
-  - CUSTOMIZE.md
+  - deploy.md
+  - deploy.py
+  - deploy.rb
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
-  - FAQ.md
   - Gemfile
   - Gemfile.lock
-  - INSTALL.md
   - LICENSE
-  - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
+  - _pages/repositories.md
   - purgecss.config.js
   - README.md
-  - readme_preview/
   - redirect/
+  - requirements.txt
   - vendor
 keep_files:
   - CNAME
