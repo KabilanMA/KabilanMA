@@ -1,0 +1,35 @@
+# Awards and honors, rendered on the Awards page sorted by date (newest first).
+# Only `date` (YYYY-MM-DD) and `title` are required; `organization`, `url`, and `note` are optional.
+# `note` supports inline Markdown (e.g. *italics*, **bold**, [links](...)).
+
+- date: 2026-11-03
+  title: Winner, Chameleon Reproducibility Challenge
+  organization: Chameleon Cloud
+  url: https://...
+  note: "For *Splyce: SIMD Vectorization of Sparse Coiteration*"
+
+- date: 2026-10-19
+  title: GPSS Travel Grant
+  organization: Graduate and Professional Student Senate, Virginia Tech
+  note: "To attend PACT 2026"
+
+- date: 2026-10-19
+  title: ACM Travel Grant
+  organization: ACM
+  note: "To attend PACT 2026"
+
+- date: 2026-08-10
+  title: Pratt Fellowship
+  organization: College of Engineering, Virginia Tech
+  url: https://ece.vt.edu/grad/financialaid/fellowships.html
+  note: "For accomplishments and contributions to the Computer Science graduate program"
+
+- date: 2026-06-15
+  title: PLMW Travel Grant
+  organization: PLDI 2026
+  url: https://pldi26.sigplan.org/track/PLMW-PLDI-2026
+  note: "To attend the Programming Languages Mentoring Workshop at PLDI 2026"
+
+- date: 2020-01-02
+  title: Mahapola Higher Education Scholarship
+  organization: Government of Sri Lanka

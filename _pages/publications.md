@@ -19,6 +19,19 @@ nav_order: 2
 
 <div class="publications">
 
-{% bibliography %}
+{% assign sections = 'conference:Conferences,workshop:Workshops,journal:Journal Articles,abstract:Talk Abstracts' | split: ',' %}
+{% for section in sections %}
+  {% assign pubtype = section | split: ':' | first %}
+  {% assign heading = section | split: ':' | last %}
+  {% capture count %}{% bibliography_count --query @*[pubtype={{ pubtype }}] %}{% endcapture %}
+  {% assign count = count | strip | plus: 0 %}
+  {% if count > 0 %}
+
+<h1>{{ heading }}</h1>
+
+{% bibliography --query @*[pubtype={{ pubtype }}] %}
+
+{% endif %}
+{% endfor %}
 
 </div>

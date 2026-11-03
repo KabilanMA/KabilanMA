@@ -4,6 +4,7 @@
 @string{aps = {American Physical Society,}}
 
 @inproceedings{splyce,
+  pubtype = {conference},
   author = {Kabilan Mahathevan and Poorna Gunathilaka and Kirshanthan Sundararajah},
   title = {Splyce: SIMD Vectorization of Sparse Coiteration},
   publisher = {Association for Computing Machinery},
@@ -18,6 +19,7 @@
 }
 
 @inproceedings{sqlflex,
+  pubtype = {conference},
   author = {Junwen An and Kabilan Mahathevan and Manuel Rigger},
   title = {Dialect-Agnostic SQL Parsing via LLM-Based Segmentation},
   publisher = {Association for Computing Machinery},
@@ -29,7 +31,18 @@
   preview={sqlflex.png}
 }
 
+@inproceedings{array26,
+  pubtype = {abstract},
+  author = {Kabilan Mahathevan and Kirshanthan Sundararajah},
+  title = {Vectorizing Sparse Coiteration for Two-finger Loop Structure (Extended Abstract)},
+  booktitle = {ARRAY Workshop 2026, co-located with PLDI 2026},
+  abstract = {Sparse tensor compilers struggle to vectorize the data-dependent scf.while co-iteration loops inherent to compressed format intersections. Because standard heuristics assume masked gather operations will negate SIMD throughput gains without high data reuse, existing vectorization efforts largely avoid pure sparse-sparse co-iteration. We challenge this assumption by proposing a novel MLIR optimization pass featuring a dual-path execution model. By natively operating on compressed hierarchies, our pass prepends a predicated, vectorized fast lane governed by dynamic runtime bounds checking, retaining the original scalar loop as a slow lane epilogue. Contrary to the assumption that such techniques require high-arithmetic-intensity workloads (high-order tensor contractions) to be profitable, our empirical evaluation demonstrates massive speedups on foundational, low-intensity kernels (SpGEMM, SpMV, MTTKRP). This proves that modern SIMD throughput can effectively overcome indirect memory latencies, unlocking generalized vectorization for dynamic sparse computations.},
+  year = {2026},
+  html = {https://pldi26.sigplan.org/details/ARRAY-2026-papers/9/Vectorizing-Sparse-Coiteration-for-Two-finger-Loop-Structure-Extended-Abstract-}
+}
+
 @inproceedings{tensure_report,
+  pubtype = {workshop},
   title={{TENSURE: Fuzzing Sparse Tensor Compilers (Registered Report)}},
   author={Kabilan Mahathevan and Yining Zhang and Muhammad Ali Gulzar and Kirshanthan Sundararajah},
   abstract={Sparse Tensor Compilers (STCs) have emerged as critical infrastructure for optimizing high-dimensional data analytics and machine learning workloads. The STCs must synthesize complex, irregular control flow for various compressed storage formats directly from high-level declarative specifications, thereby making them highly susceptible to subtle correctness defects. Existing testing frameworks, which rely on mutating computation graphs restricted to a standard vocabulary of operators, fail to exercise the arbitrary loop synthesis capabilities of these compilers. Furthermore, generic grammar-based fuzzers struggle to generate valid inputs due to the strict rules governing how indices are reused across multiple tensors.
@@ -40,11 +53,11 @@
   year={2026},
   pdf={tensure_fuzzing.pdf},
   additional_info   = {. *More Information* can be [found here](https://github.com/KabilanMA/TenSure/)},
-  selected = {true},
   preview={tensure.png}
 }
 
 @inproceedings{bugsinkube,
+  pubtype = {workshop},
   title={{BugsInKube: A Collection of Reconciliation Bugs}},
   author={Kabilan Mahathevan and Sivakajan Sivaparan and Tharsha Sivapalarajah and Sunimal Rathnayake and Ridwan Shariffdeen},
   abstract={In the contemporary technological landscape, the widespread adoption of cloud systems and distributed resources has highlighted the need to overcome inherent limitations in achieving complete system dependability. This presents both significant opportunities and challenges in automating bug detection, bug fixing, and verification efforts in complex distributed systems, such as cloud infrastructure management tools like Kubernetes and Twine. Despite the importance of these efforts, there is a notable lack of data that can be used to study and analyze the types of challenges faced in developing and supporting these systems, as well as in building test automation and bug detection tools. To address this gap, we conducted an in-depth investigation into one of the most popular ecosystems: Kubernetes. We manually analyzed reported bugs and curated a comprehensive dataset comprising 311 developer-confirmed bugs. This dataset includes detailed information on bug categories, severity, affected versions, and reproducible steps when available. Through our analysis, we identified an emerging bug type in these systems, referred to as reconciliation bugs. To assist developers and researchers in creating new testing strategies for these platforms, we developed a bug-reproducing script that can reproduce 52 reconciliation bugs out of the 311 total bugs in Kubernetes. This tool provides valuable insights into these issues, facilitating the development of more robust testing and maintenance strategies. The dataset is publicly available and can be accessed at: https:/Igithub.com/EmInReLab/BugsInKube},

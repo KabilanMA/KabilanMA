@@ -94,6 +94,12 @@
                     {% endfor %}
                   </div>
                 </li>
+              {% elsif p.redirect %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ p.redirect | relative_url }}" target="_blank" rel="noopener noreferrer">
+                    {{- p.title -}}
+                  </a>
+                </li>
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
