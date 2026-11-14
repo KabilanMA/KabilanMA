@@ -626,11 +626,12 @@ third_party_libraries:
 # Get external JSON data
 # -----------------------------------------------------------------------------
 
-# The CV page renders _data/cv.yml. To render a JSON Resume instead,
-# uncomment the entry below (site.data.resume takes precedence over cv.yml).
+# The CV page renders _data/cv.yml. To render a JSON Resume instead, replace the
+# empty list below with this entry (site.data.resume takes precedence over cv.yml):
+#   jekyll_get_json:
+#     - data: resume
+#       json: assets/json/resume.json # it can also be an url
 jekyll_get_json: []
-  # - data: resume
-  #   json: assets/json/resume.json # it can also be an url
 jsonresume:
   - basics
   - work

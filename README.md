@@ -36,7 +36,7 @@ or <a href="mailto:kabilanen@gmail.com"><b>email</b></a> me
 <br>
 
 <i>Follow me around the web:</i><br>
-![](https://komarev.com/ghpvc/?username=KabilanMA&color=blueviolet&label=Account+Peeks)
+![Account Peeks](https://visitor-badge.laobi.icu/badge?page_id=KabilanMA.KabilanMA&left_text=Account%20Peeks&right_color=%238a2be2)
 
 <a href="https://www.linkedin.com/in/kabilan-mahathevan-a862441aa/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 <a href="https://www.instagram.com/kabilan.mahathevan/" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?&style=flat-square&logo=instagram&logoColor=white" alt="Instagram"></a>
