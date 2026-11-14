@@ -20,7 +20,7 @@ arith ----/
 <span class="k">define</span> <span class="kt">i32</span> <span class="vg">@main</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">; Call 'add' with arguments 10 and 32</span>
   <span class="nv">%result</span> <span class="p">=</span> <span class="k">call</span> <span class="kt">i32</span> <span class="vg">@add</span><span class="p">(</span><span class="kt">i32</span> <span class="m">10</span><span class="p">,</span> <span class="kt">i32</span> <span class="m">32</span><span class="p">)</span>
-  
+
   <span class="c1">; Return the result as the exit code</span>
   <span class="k">ret</span> <span class="kt">i32</span> <span class="nv">%result</span>
 <span class="p">}</span>
