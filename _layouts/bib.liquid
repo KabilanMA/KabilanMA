@@ -200,9 +200,7 @@
     </div>
 
     {% if entry.award %}
-      <div class="award-statement">
-        🏆 {{ entry.award | markdownify | remove: '<p>' | remove: '</p>' }}
-      </div>
+      <div class="award-statement">🏆 {{ entry.award | markdownify | remove: '<p>' | remove: '</p>' }}</div>
     {% endif %}
 
     <!-- Links/Buttons -->
@@ -370,7 +368,7 @@
       <div class="bibtex hidden">
         {% highlight bibtex %}
         {{- entry.bibtex | hideCustomBibtex -}}
-        {% endhighlight %}
+      {% endhighlight %}
       </div>
     {% endif %}
 

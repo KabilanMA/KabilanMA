@@ -1,0 +1,2 @@
+# Leave helper scripts out of GitHub's language statistics for this repo.
+bin/** linguist-detectable=false

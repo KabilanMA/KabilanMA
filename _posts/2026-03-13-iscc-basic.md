@@ -10,13 +10,14 @@ giscus_comments: true
 related_posts: false
 toc:
   beginning: false
-
 ---
+
 <p style="text-align: right;">
       <a href="../islpy-basic/">Next</a>      
 </p>
 
 ### Introduction
+
 ---
 
 The Integer Set Library (ISL) provides a powerful framework for analyzing and optimizing loops in computer programs. At its core is `iscc`, a text-based syntax that allows us to represent complex loop structures as mathematical objects. By describing loop iterations, memory accesses, and data dependencies using sets and relations, compilers can reason about code in a precise way. This article introduces the fundamental concepts of `iscc`, demonstrating how it models loops, memory, dependencies, and execution order to enable advanced compiler optimizations.
@@ -30,11 +31,13 @@ In ISL, a basic Set represents a collection of integer points bounded by linear 
     `{ [variables] : conditions }`
 
 If we have a standard C loop:
+
 ```c
 for (int i = 0; i < 5; i++) {
     // loop body
 }
 ```
+
 The iteration variable is `i`. and the bounds dictate that `i` starts at 0 and stops before 5. In ISL syntax, the Set representing all the values of `i` during execution is written as:
 
 `{ [i] : 0 <= i < 5 }`
@@ -62,36 +65,40 @@ The syntax uses an arrow `->` to connect them:
 ```c
 for (int i = 0; i < 5; i++) {
     for (int j = 0; j < i; j++) {
-        A[i + j] = 0; 
+        A[i + j] = 0;
     }
 }
 ```
+
 We want to map the loop iterations [i,j] to the specific memory index they access. If we let `[k]` represent the 1D index array `A`, the relation mapping the iteration space to the accessed memory is:
 `{ [i,j] -> [k] : k = i+j }`
 
 In ISL, if we apply an access Relation to an iteration Set, the calculator outputs a new Set representing the accessed memory locations (Finds the loop's memory footprint).
 
 Let's take a simpler 1D example:
-- __Iteration Set__ (S): `{ [i] : 0 <= i < 5 }` (Loop from 0 to 4)
-- __Access Relation__ (R): `{ [i] -> [k] : k = i+2 }` (Accessing `A[i+2]`)
 
-When we apply the Access Relation to the Iteration Set in the ISL calculator, it computes the range of memory indices accessed. Since `i` ranges from 0 to 4, and each iteration accesses `A[i+2]`, the resulting memory footprint Set is: 
+- **Iteration Set** (S): `{ [i] : 0 <= i < 5 }` (Loop from 0 to 4)
+- **Access Relation** (R): `{ [i] -> [k] : k = i+2 }` (Accessing `A[i+2]`)
+
+When we apply the Access Relation to the Iteration Set in the ISL calculator, it computes the range of memory indices accessed. Since `i` ranges from 0 to 4, and each iteration accesses `A[i+2]`, the resulting memory footprint Set is:
 
 `{ [k] : 2 <= k <= 6 }`
 
 ### Data Dependencies
 
-Dependencies tell the compiler if it is safe to run loop iterations in parallel or if they can be reordered. If iteration B needs a value computed by iteration A, B depends on A. This is called __Flow Dependency__ (or Read-After-Write).
+Dependencies tell the compiler if it is safe to run loop iterations in parallel or if they can be reordered. If iteration B needs a value computed by iteration A, B depends on A. This is called **Flow Dependency** (or Read-After-Write).
 
 Let's look at a classic example:
+
 ```c
 for (int i = 1; i < 5; i++) {
     A[i] = A[i-1] + 5;
 }
 ```
+
 Here, the iteration `i` writes to `A[i]`, but it first has to read from `A[i-1]`. This means the current iteration relies on the result calculated by the previous iteration.
 
-In ISL, we represent these dependencies just like memory accesses: as __Relations__. But instead of mapping iterations to memory, a dependency relation maps a _source iteration_ (the one doing the writing) to a _target iteration_ (the one doing the reading).
+In ISL, we represent these dependencies just like memory accesses: as **Relations**. But instead of mapping iterations to memory, a dependency relation maps a _source iteration_ (the one doing the writing) to a _target iteration_ (the one doing the reading).
 
 If we use `[s]` to represent the source iteration and `[t]` to represent the target iteration that depends on it, i.e., the target iteration always happens exactly one step after its source iteration, we can write the ISL relation as follows:
 
@@ -101,7 +108,7 @@ Which means target iteration `t` must wait for the source iteration `s` to finis
 
 ### Schedules
 
-While __Sets__ define what executes, and __Dependencies__ define the rules of ordering, a schedule defines exactly when each iteration actually runs. It does this by mapping the iteration Set to a _time_ space.
+While **Sets** define what executes, and **Dependencies** define the rules of ordering, a schedule defines exactly when each iteration actually runs. It does this by mapping the iteration Set to a _time_ space.
 
 Because a Schedule is just a mapping from one space (iteration) to another (time), we write it as an ISL Relation:
 
@@ -114,13 +121,15 @@ for (int i = 0; i < 5; i++) {
     // loop body
 }
 ```
+
 The most basic schedule is just the original execution order, where iteration `i` simply executes at time `i` (`t = i`). Which can be written in ISL relation as follows:
 
 `{ [i] -> [t]: t=i }`
 
-Now, let's look at a classic compiler optimization that schedules allow us to do easily: __Loop Interchange__. This is often used to improve memory locality (cache performance) when accessing multi-dimensional arrays.
+Now, let's look at a classic compiler optimization that schedules allow us to do easily: **Loop Interchange**. This is often used to improve memory locality (cache performance) when accessing multi-dimensional arrays.
 
 Imagine we have a standard 2D loop:
+
 ```c
 for (int i = 0; i < 5; i++) {
     for (int j = 0; j < 10; j++>) {
@@ -128,6 +137,7 @@ for (int i = 0; i < 5; i++) {
     }
 }
 ```
+
 The original sequential schedule for this uses a 2D time vector `[t1, t2]`. It looks like this:
 
 `{ [i,j] -> [t1,t2]: t1=i and t2=j }`

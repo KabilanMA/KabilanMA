@@ -12,6 +12,7 @@ chmod +x deploy.rb
 If I'd rather point `people.cs.vt.edu/~kabilan` at my main site (`https://kabilanma.github.io/KabilanMA/`) instead of mirroring the full Jekyll build there, use the standalone [`redirect/`](redirect/) folder.
 
 It contains just:
+
 - `index.html` — a page with a meta-refresh + JS redirect to `https://kabilanma.github.io/KabilanMA/`
 - `.htaccess` — an Apache rewrite rule that 301-redirects any path under `~kabilan` to the same URL
 

@@ -6,7 +6,7 @@
 {%- endcomment -%}
 {%- assign seen_anime = site.data.anime_catalog | where: 'seen', true -%}
 {%- if seen_anime.size > 0 -%}
-<span class="anime-hover" tabindex="0">anime<span class="anime-hover-list" role="tooltip"><span class="anime-hover-box"><span class="anime-hover-heading">Completed Anime List</span>{%- for show in seen_anime -%}{%- assign show_title = show.display_title | default: show.title_english | default: show.title -%}<span class="anime-hover-item">{%- if show.url -%}<a href="{{ show.url }}" target="_blank" rel="noopener noreferrer">{{ show_title }}</a>{%- else -%}{{ show_title }}{%- endif -%}{%- if show.note -%}<span class="anime-hover-note"> &mdash; {{ show.note }}</span>{%- endif -%}</span>{%- endfor -%}</span></span></span>
+<span class="anime-hover" tabindex="0">anime<span class="anime-hover-list" role="tooltip"><span class="anime-hover-box"><span class="anime-hover-heading">Completed Anime List (Incomplete)</span>{%- for show in seen_anime -%}{%- assign show_title = show.display_title | default: show.title_english | default: show.title -%}<span class="anime-hover-item">{%- if show.url -%}<a href="{{ show.url }}" target="_blank" rel="noopener noreferrer">{{ show_title }}</a>{%- else -%}{{ show_title }}{%- endif -%}{%- if show.note -%}<span class="anime-hover-note"> &mdash; {{ show.note }}</span>{%- endif -%}</span>{%- endfor -%}</span></span></span>
 {%- else -%}
 anime
 {%- endif -%}

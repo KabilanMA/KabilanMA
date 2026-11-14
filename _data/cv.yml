@@ -144,7 +144,7 @@
 - title: Fellowships and Awards
   type: list
   contents:
-    - "<b>Chameleon Reproducibility Challenge</b> &mdash; Winner at PACT'26, featured in their <a href=\"https://blog.chameleoncloud.org/posts/chameleon-newsletter-changelog-october-2026/\">October newsletter</a>"
+    - '<b>Chameleon Reproducibility Challenge</b> &mdash; Winner at PACT''26, featured in their <a href="https://blog.chameleoncloud.org/posts/chameleon-newsletter-changelog-october-2026/">October newsletter</a>'
     - "<b>Student Travel Grants</b> &mdash; PLDI-PLMW'26, VT GPSS'26, PACT'26"
     - "<b>Pratt Fellowship</b> &mdash; Virginia Tech (2026/27)"
     - "<b>Mahapola Merit Scholarship</b> &mdash; Government of Sri Lanka (2020&ndash;2024)"
