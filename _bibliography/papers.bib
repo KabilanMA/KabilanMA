@@ -4,6 +4,8 @@
 @string{aps = {American Physical Society,}}
 
 @inproceedings{splyce,
+  abbr = {PACT 2026},
+  acm_badges = {available, functional, reproduced},
   pubtype = {conference},
   author = {Kabilan Mahathevan and Poorna Gunathilaka and Kirshanthan Sundararajah},
   title = {Splyce: SIMD Vectorization of Sparse Coiteration},
@@ -14,11 +16,11 @@
   doi = {https://doi.org/10.1145/3838684.3846860},
   award = {Winner, Chameleon Reproducibility Challenge},
   pdf={splyce.pdf},
-  selected = {true},
-  preview = {splyce.png}
+  selected = {true}
 }
 
 @inproceedings{sqlflex,
+  abbr = {SIGMOD 2026},
   pubtype = {conference},
   author = {Junwen An and Kabilan Mahathevan and Manuel Rigger},
   title = {Dialect-Agnostic SQL Parsing via LLM-Based Segmentation},
@@ -27,11 +29,11 @@
   abstract={SQL is a widely adopted language for querying data, which has led to the development of various SQL analysis and rewriting tools. However, due to the diversity of SQL dialects, such tools often fail when encountering unrecognized dialect-specific syntax. While Large Language Models (LLMs) have shown promise in understanding SQL queries, their inherent limitations in handling hierarchical structures and hallucination risks limit their direct applicability in parsing. To address these limitations, we propose SQLFlex, a novel query rewriting framework that integrates grammar-based parsing with LLM-based segmentation to parse diverse SQL dialects robustly. Our core idea is to decompose hierarchical parsing to sequential segmentation tasks, which better aligns with the strength of LLMs and improves output reliability through validation checks. Specifically, SQLFlex uses clause-level segmentation and expression-level segmentation as two strategies that decompose elements on different levels of a query. We extensively evaluated SQLFlex on both real-world use cases as well as in a standalone evaluation. In SQL linting, SQLFlex outperforms SQLFluff in ANSI mode by 63.68% in F1 score while matching its dialect-specific mode performance. In test case reduction, SQLFlex outperforms SQLess by up to 10 times in simplification rate. In the standalone evaluation, it parses 91.55% to 100% of queries across eight distinct dialects, outperforming all baseline parsers. We believe SQLFlex can serve as a foundation for many query analysis and rewriting use cases.},
   doi={https://doi.org/10.1145/3802038},
   year = {2026},
-  pdf = {sqlflex.pdf},
-  preview={sqlflex.png}
+  pdf = {sqlflex.pdf}
 }
 
 @inproceedings{array26,
+  abbr = {ARRAY 2026},
   pubtype = {abstract},
   author = {Kabilan Mahathevan and Kirshanthan Sundararajah},
   title = {Vectorizing Sparse Coiteration for Two-finger Loop Structure (Extended Abstract)},
@@ -42,6 +44,7 @@
 }
 
 @inproceedings{tensure_report,
+  abbr = {FUZZING 2026},
   pubtype = {workshop},
   title={{TENSURE: Fuzzing Sparse Tensor Compilers (Registered Report)}},
   author={Kabilan Mahathevan and Yining Zhang and Muhammad Ali Gulzar and Kirshanthan Sundararajah},
@@ -52,11 +55,11 @@
   doi={https://dx.doi.org/10.14722/fuzzing.2026.23006},
   year={2026},
   pdf={tensure_fuzzing.pdf},
-  additional_info   = {. *More Information* can be [found here](https://github.com/KabilanMA/TenSure/)},
-  preview={tensure.png}
+  additional_info   = {. *More Information* can be [found here](https://github.com/KabilanMA/TenSure/)}
 }
 
 @inproceedings{bugsinkube,
+  abbr = {APSEC 2024},
   pubtype = {workshop},
   title={{BugsInKube: A Collection of Reconciliation Bugs}},
   author={Kabilan Mahathevan and Sivakajan Sivaparan and Tharsha Sivapalarajah and Sunimal Rathnayake and Ridwan Shariffdeen},
@@ -64,6 +67,5 @@
   booktitle={31st Asia-Pacific Software Engineering Conference (APSEC)},
   year={2024},
   doi={https://doi.org/10.1109/APSEC65559.2024.00057},
-  pdf={BugsInKube.pdf},
-  preview={bugsinkube.png}
+  pdf={BugsInKube.pdf}
 }

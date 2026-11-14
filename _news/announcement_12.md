@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-📋 Joined the artifact evaluation committee of [POPL'27](https://popl27.sigplan.org/track/POPL-2027-artifact-evaluation) and [PPoPP'27](https://ppopp27.sigplan.org/track/PPoPP-2027-artifact-evaluation)
+🧪 Joined the artifact evaluation committee of [POPL'27](https://popl27.sigplan.org/track/POPL-2027-artifact-evaluation) and [PPoPP'27](https://ppopp27.sigplan.org/track/PPoPP-2027-artifact-evaluation)

@@ -64,6 +64,12 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
+    <!-- Travel map -->
+    {% if page.travel_map %}
+      {% comment %} <h2>Places I've Been</h2> {% endcomment %}
+      {% include travel_map.liquid %}
+    {% endif %}
+
     <!-- Social -->
     {% if page.social %}
       <div class="social">

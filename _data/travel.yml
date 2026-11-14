@@ -1,0 +1,119 @@
+# Places shown on the travel map on the About page (_includes/travel_map.liquid).
+# Each place has coordinates and one or more visits shown when hovering over its marker.
+# type: home (lived/studied/worked) | conference (professional trip) | fun (personal visit)
+# A place's marker colour follows the type of its first visit.
+# url is optional and makes the visit title a link.
+
+- place: Blacksburg, VA, USA
+  lat: 37.2296
+  lng: -80.4139
+  visits:
+    - title: PhD in Computer Science, Virginia Tech
+      date: 2025 &ndash; present
+      type: home
+      url: https://www.vt.edu/
+
+- place: Vavuniya, Sri Lanka
+  lat: 8.7514
+  lng: 80.4971
+  visits:
+    - title: Grew up here
+      date: until 2019
+      type: home
+    - title: SDE Intern, The Software Practice (remote)
+      date: 2023
+      type: home
+
+- place: Colombo, Sri Lanka
+  lat: 6.9271
+  lng: 79.8612
+  visits:
+    - title: BSc, University of Moratuwa
+      date: 2019 &ndash; 2024
+      type: home
+    - title: Software Engineer, Sysco LABS
+      date: 2024
+      type: home
+
+- place: Singapore
+  lat: 1.2966
+  lng: 103.7764
+  visits:
+    - title: Visiting Research Scholar, TEST Lab, NUS
+      date: 2024 &ndash; 2025
+      type: home
+
+- place: Kuala Lumpur, Malaysia
+  lat: 3.1390
+  lng: 101.6869
+  visits:
+    - title: Trip to Kuala Lumpur
+      date: Mar 2025
+      type: fun
+
+- place: Langkawi, Malaysia
+  lat: 6.3500
+  lng: 99.8000
+  visits:
+    - title: Trip to Langkawi Island
+      date: Mar 2025
+      type: fun
+
+- place: Bangkok, Thailand
+  lat: 13.7563
+  lng: 100.5018
+  visits:
+    - title: Trip to Bangkok
+      date: May 2025
+      type: fun
+
+- place: New York, NY, USA
+  lat: 40.7128
+  lng: -74.0060
+  visits:
+    - title: Christmas &amp; New Year in New York
+      date: Dec 2025 &ndash; Jan 2026
+      type: fun
+
+- place: Paris, France
+  lat: 48.8566
+  lng: 2.3522
+  visits:
+    - title: Trip to Paris
+      date: May 2026
+      type: fun
+
+- place: Chongqing, China
+  lat: 29.5630
+  lng: 106.5516
+  visits:
+    - title: APSEC 2024 &mdash; presented BugsInKube
+      date: Dec 2024
+      type: conference
+
+- place: San Diego, CA, USA
+  lat: 32.7157
+  lng: -117.1611
+  visits:
+    - title: NDSS 2026 (FUZZING Workshop) &mdash; presented TENSURE
+      date: Feb 2026
+      type: conference
+      url: https://www.ndss-symposium.org/ndss2026/
+
+- place: Boulder, CO, USA
+  lat: 40.0150
+  lng: -105.2705
+  visits:
+    - title: PLDI 2026 &amp; PLMW &mdash; ARRAY'26 talk
+      date: Jun 2026
+      type: conference
+      url: https://pldi26.sigplan.org/
+
+- place: Chicago, IL, USA
+  lat: 41.8781
+  lng: -87.6298
+  visits:
+    - title: PACT 2026 &mdash; presented Splyce
+      date: Oct 2026
+      type: conference
+      url: https://pact2026.github.io/

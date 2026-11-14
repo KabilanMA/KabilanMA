@@ -23,9 +23,10 @@ or <a href="mailto:kabilanen@gmail.com"><b>email</b></a> me
 
 <br>
   
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KabilanMA&layout=compact&title_color=7A7ADB&icon_color=2234AE&text_color=D3D3D3&bg_color=0,000000,130F40)](https://github.com/KabilanMA/github-readme-stats)
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=KabilanMA&theme=tokyonight" alt="Kabilan's top languages by repo" height="165">
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=KabilanMA&theme=tokyonight" alt="Kabilan's top languages by commit" height="165">
 
-![Kabilan's github stats](https://github-readme-stats.vercel.app/api?username=kabilanma&show_icons=true&theme=tokyonight)
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=KabilanMA&theme=tokyonight" alt="Kabilan's GitHub stats" height="165">
 
 <br>
 <i>Random dev joke for you!</i><br>

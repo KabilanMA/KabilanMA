@@ -27,21 +27,22 @@ layout: default
           <a class="anchor" id="{{ entry.title }}"></a>
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-            <div>
-              {% if entry.type == 'list' %}
-                {% include cv/list.liquid %}
-              {% elsif entry.type == 'map' %}
-                {% include cv/map.liquid %}
-              {% elsif entry.type == 'nested_list' %}
-                {% include cv/nested_list.liquid %}
-              {% elsif entry.type == 'time_table' %}
-                {% include cv/time_table.liquid %}
-              {% elsif entry.type == 'list_groups' %}
-                {% include cv/list_groups.liquid %}
-              {% else %}
-                {{ entry.contents }}
-              {% endif %}
-            </div>
+            {% if entry.subsections %}
+              {% comment %} Several blocks in one card, each with its own heading (e.g. Talks). {% endcomment %}
+              {% assign cv_section = entry %}
+              {% for entry in cv_section.subsections %}
+                <div class="cv-subsection">
+                  {% if entry.title and entry.type != 'bibliography' %}
+                    <h5 class="cv-subsection-title">{{ entry.title }}</h5>
+                  {% endif %}
+                  {% include cv/entry.liquid %}
+                </div>
+              {% endfor %}
+            {% else %}
+              <div>
+                {% include cv/entry.liquid %}
+              </div>
+            {% endif %}
           </div>
         {% endfor %}
       </div>

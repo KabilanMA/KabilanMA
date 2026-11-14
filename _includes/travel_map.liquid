@@ -1,0 +1,121 @@
+{% comment %}
+  World map of places from _data/travel.yml. Requires `map: true` in the page
+  front matter so Leaflet is loaded (see _includes/head.liquid and scripts/leaflet.liquid).
+{% endcomment %}
+<div class="travel-map-container">
+  <div id="travel-map" class="travel-map"></div>
+  <div class="travel-map-legend">
+    <span><i class="travel-dot travel-dot-home"></i>Lived &amp; worked</span>
+    <span><i class="travel-dot travel-dot-conference"></i>Conferences &amp; events</span>
+    <span><i class="travel-dot travel-dot-fun"></i>Fun visits</span>
+  </div>
+</div>
+<script>
+  window.addEventListener('load', () => {
+    const places = {{ site.data.travel | jsonify }};
+    const el = document.getElementById('travel-map');
+    if (!el || typeof L === 'undefined') return;
+
+    const map = L.map(el, {
+      worldCopyJump: true,
+      scrollWheelZoom: false,
+      minZoom: 0,
+      zoomSnap: 0.1, // fractional zoom so the initial view fits the dots tightly
+      attributionControl: false,
+    });
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+
+    // Hover details live in a floating box on <body> rather than inside the map,
+    // so they are not clipped by the map's edges.
+    const tip = document.createElement('div');
+    tip.className = 'travel-tooltip';
+    tip.hidden = true;
+    document.body.appendChild(tip);
+    let tipMarker = null;
+    let hideTimer = null;
+
+    const placeTip = () => {
+      if (!tipMarker) return;
+      const mapRect = el.getBoundingClientRect();
+      const pt = map.latLngToContainerPoint(tipMarker.getLatLng());
+      const x = mapRect.left + pt.x;
+      const y = mapRect.top + pt.y;
+      const margin = 8;
+      let left = x - tip.offsetWidth / 2;
+      left = Math.max(margin, Math.min(left, window.innerWidth - tip.offsetWidth - margin));
+      // Above the dot, or below it when there's no room at the top of the window.
+      let top = y - tip.offsetHeight - 14;
+      if (top < margin) top = y + 14;
+      tip.style.left = `${left}px`;
+      tip.style.top = `${top}px`;
+    };
+    const showTip = (marker) => {
+      clearTimeout(hideTimer);
+      tipMarker = marker;
+      tip.innerHTML = marker.travelHtml;
+      tip.hidden = false;
+      placeTip();
+    };
+    // Short delay so the pointer can move from the dot onto the box to click its links.
+    const hideTip = () => {
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => {
+        tip.hidden = true;
+        tipMarker = null;
+      }, 200);
+    };
+    tip.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+    tip.addEventListener('mouseleave', hideTip);
+    map.on('move zoom', placeTip);
+    window.addEventListener('scroll', placeTip, { passive: true });
+    window.addEventListener('resize', placeTip);
+    // Tapping the map background (touch devices) closes the box.
+    map.on('click', () => {
+      tip.hidden = true;
+      tipMarker = null;
+    });
+
+    const markers = places.map((p) => {
+      const type = (p.visits[0] && p.visits[0].type) || 'fun';
+      const items = p.visits
+        .map((v) => {
+          const title = v.url ? `<a href="${v.url}" target="_blank" rel="noopener noreferrer">${v.title}</a>` : v.title;
+          return `<li><span class="travel-dot travel-dot-${v.type || 'fun'}"></span>${title}${v.date ? ` <span class="travel-date">${v.date}</span>` : ''}</li>`;
+        })
+        .join('');
+      const marker = L.circleMarker([p.lat, p.lng], {
+        radius: 7,
+        weight: 2,
+        className: `travel-marker travel-marker-${type}`,
+      }).addTo(map);
+      marker.travelHtml = `<div class="travel-place">${p.place}</div><ul>${items}</ul>`;
+      marker.on('mouseover', () => showTip(marker));
+      marker.on('mouseout', hideTip);
+      // Touch devices have no hover, so a tap shows the same box.
+      marker.on('click', (e) => {
+        L.DomEvent.stopPropagation(e);
+        showTip(marker);
+      });
+      return marker;
+    });
+
+    if (!markers.length) {
+      map.setView([20, 0], 1);
+      return;
+    }
+
+    // Zoom as close as possible while keeping every dot visible, and refit when the
+    // container is resized, until the visitor pans or zooms the map themselves.
+    const bounds = L.featureGroup(markers).getBounds();
+    const fit = () => map.fitBounds(bounds, { padding: [24, 24], maxZoom: 6, animate: false });
+    let userMoved = false;
+    fit();
+    ['pointerdown', 'keydown'].forEach((type) =>
+      el.addEventListener(type, () => (userMoved = true), { once: true })
+    );
+    new ResizeObserver(() => {
+      map.invalidateSize();
+      if (!userMoved) fit();
+    }).observe(el);
+  });
+</script>

@@ -1,0 +1,155 @@
+# CV content rendered on /cv/ by _layouts/cv.liquid.
+# Supported entry types: map, list, nested_list, time_table, list_groups, bibliography.
+# An entry can instead hold `subsections`, a list of typed blocks shown in one card.
+# Strings are rendered as raw HTML, so inline <a>, <b>, <i> tags work.
+# Keep this in sync with assets/pdf/cv_pdf.pdf.
+
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Kabilan Mahathevan
+    - name: Position
+      value: Computer Science PhD Student, Virginia Tech
+    - name: Location
+      value: Blacksburg, VA, USA
+    - name: Email
+      value: kabilan at vt dot edu
+    - name: Website
+      value: <a href="https://kabilan.info">kabilan.info</a>
+    - name: GitHub
+      value: <a href="https://github.com/KabilanMA">github.com/KabilanMA</a>
+    - name: LinkedIn
+      value: <a href="https://www.linkedin.com/in/kabilan-dev">in/kabilan-dev</a>
+
+- title: Areas of Interest
+  type: list
+  contents:
+    - Sparse Tensor Computation &middot; High Performance Computing &middot; Programming Languages &amp; Compilers &middot; Program Analysis &middot; Machine Learning
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD in Computer Science
+      institution: Virginia Tech, Blacksburg, VA, USA
+      year: 2025 &ndash; present
+      description:
+        - "CGPA: 4.0/4.0"
+        - Advised by Prof. Kirshanthan ("Krish") Sundararajah.
+        - Working on sparse tensor compiler construction and validation.
+    - title: BSc in Computer Science and Engineering
+      institution: University of Moratuwa, Colombo, Sri Lanka
+      year: 2019 &ndash; 2024
+      description:
+        - "CGPA: 3.92/4.2 (First Class)"
+        - Dean's List &amp; Cohort Representative for the 5th and 6th semesters.
+
+- title: Publications
+  type: bibliography # rendered from _bibliography/papers.bib, same as /publications/
+  exclude: abstract # comma-separated pubtypes to skip
+
+- title: Talks
+  subsections: # each renders under its own heading inside this card
+    - title: Invited Talks
+      type: time_table
+      contents:
+        - title: "Splyce: SIMD Vectorization of Sparse Coiteration"
+          institution: PurPL Seminar, Purdue University
+          year: 10/2026
+          linkitems:
+            - linkname: Seminar page
+              link: https://purduepl.github.io/seminars/2026/2026-10-9-seminar
+        - title: "TenSure: Fuzzing Sparse Tensor Compiler"
+          institution: PurPL Seminar, Purdue University
+          year: 01/2026
+          linkitems:
+            - linkname: Seminar page
+              link: https://purduepl.github.io/seminars/2026/2026-1-29-seminar
+    - type: bibliography # ARRAY etc., from _bibliography/papers.bib
+      only: abstract # shown under the "Talk Abstracts" heading
+
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: PhD Student
+      institution: Virginia Tech
+      location: Blacksburg, USA
+      year: 09/2025 &ndash; Present
+      description:
+        - Optimizing sparse tensor computation to guarantee correctness and efficiency across heterogeneous hardware systems.
+    - title: Visiting Research Scholar
+      institution: TEST Lab, National University of Singapore
+      location: Singapore
+      year: 09/2024 &ndash; 05/2025
+      description:
+        - Worked with Prof. Manuel Rigger on improving the performance of mutation testing for SQL queries, and on a dialect-agnostic AST for SQL queries using LLM-based segmentation.
+    - title: Fuzzing Cloud PaaS Systems
+      institution: University of Moratuwa
+      location: Colombo, Sri Lanka
+      year: 07/2023 &ndash; 06/2024
+      description:
+        - Developed a specialized fuzzing technique to systematically uncover reconciliation bugs in Kubernetes as part of my undergraduate final-year project. The empirical study of reconciliation bugs in Kubernetes was accepted to APSEC 2024.
+        - "Advisors: Dr. Sunimal Rathnayake &amp; Dr. Ridwan Shariffdeen"
+
+- title: Teaching Experience
+  type: time_table
+  contents:
+    - title: Teaching Assistant
+      institution: Virginia Tech
+      location: Blacksburg, USA
+      year: 2025 &ndash; Present
+      description:
+        - CS4104 &mdash; Data and Algorithm Analysis (Fall 2026)
+        - CS1064 &mdash; Introduction to Programming in Python (Fall 2025)
+    - title: Teaching Assistant
+      institution: University of Moratuwa
+      location: Colombo, Sri Lanka
+      year: 07/2023 &ndash; 06/2024
+      description:
+        - CS3063 &mdash; Theory of Computing
+        - CS2043 &mdash; Operating Systems
+        - CS3043 &mdash; Database Systems
+
+- title: Professional Experience
+  type: time_table
+  contents:
+    - title: Software Engineer
+      institution: Sysco LABS
+      location: Colombo, Sri Lanka
+      year: 06/2024 &ndash; 09/2024
+      description:
+        - Worked on a competition organizing and judging platform from backend to frontend.
+        - Implemented the unit test suite, regression testing, UI functional testing suite, and the relevant CI pipeline.
+    - title: Software Development Engineer Intern
+      institution: The Software Practice
+      location: Cecil Court, Singapore
+      year: 01/2023 &ndash; 06/2023
+      description:
+        - Worked on the LEAP project for the Building and Construction Authority (BCA), Singapore.
+        - Worked with the front-end team to create a better and more user-friendly interface.
+        - Created the full regression testing suite for the project.
+
+- title: Services
+  type: nested_list
+  contents:
+    - title: Artifact Reviewer
+      items:
+        - Principles and Practice of Parallel Programming [PPoPP'27]
+        - Principles of Programming Languages [POPL'27]
+        - 23rd USENIX Conference on File and Storage Technologies [FAST'25]
+    - title: Google Summer of Code
+      items:
+        - Mentored the SQLancer project in GSoC 2025
+
+- title: Fellowships and Awards
+  type: list
+  contents:
+    - "<b>Chameleon Reproducibility Challenge</b> &mdash; Winner at PACT'26, featured in their <a href=\"https://blog.chameleoncloud.org/posts/chameleon-newsletter-changelog-october-2026/\">October newsletter</a>"
+    - "<b>Student Travel Grants</b> &mdash; PLDI-PLMW'26, VT GPSS'26, PACT'26"
+    - "<b>Pratt Fellowship</b> &mdash; Virginia Tech (2026/27)"
+    - "<b>Mahapola Merit Scholarship</b> &mdash; Government of Sri Lanka (2020&ndash;2024)"
+
+- title: Skills
+  type: list
+  contents:
+    - Python &middot; C++ &middot; LLVM/MLIR &middot; RDBMS &middot; Java &middot; Lean &middot; CUDA/HIP

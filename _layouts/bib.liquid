@@ -25,6 +25,23 @@
           <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
+      {% if entry.acm_badges %}
+        <div class="acm-badges">
+          {% assign acm_badges = entry.acm_badges | split: ',' %}
+          {% for acm_badge_raw in acm_badges %}
+            {% assign acm_badge = acm_badge_raw | strip %}
+            {% assign acm_badge_info = site.data.acm_badges[acm_badge] %}
+            {% if acm_badge_info %}
+              <img
+                src="{{ acm_badge_info.image | relative_url }}"
+                alt="ACM badge: {{ acm_badge_info.name }}"
+                title="ACM badge: {{ acm_badge_info.name }}"
+                loading="lazy"
+              >
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">

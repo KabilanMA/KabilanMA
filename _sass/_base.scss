@@ -485,6 +485,25 @@ footer.sticky-bottom {
         background-color: var(--global-theme-color) !important;
       }
     }
+
+    .publications {
+      margin-top: 0.5rem;
+
+      h5 {
+        color: var(--global-theme-color);
+        margin-top: 1rem;
+      }
+    }
+
+    // Sub-section headings inside one card (e.g. Talks), styled like the publication groups
+    .cv-subsection-title {
+      color: var(--global-theme-color);
+      margin-top: 1rem;
+    }
+
+    .cv-subsection + .cv-subsection {
+      margin-top: 0.5rem;
+    }
   }
 }
 
@@ -669,6 +688,17 @@ footer.sticky-bottom {
             &:hover {
               text-decoration: none;
             }
+          }
+        }
+
+        .acm-badges {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.25rem;
+
+          img {
+            width: 2.25rem;
+            height: 2.25rem;
           }
         }
 
@@ -1265,4 +1295,175 @@ ninja-keys::part(ninja-input-wrapper) {
 ::highlight(search) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
+}
+
+// Travel map (About page)
+
+.travel-map-container {
+  margin-bottom: 2rem;
+
+  .travel-map {
+    aspect-ratio: 2 / 1;
+    min-height: 220px;
+    max-height: 420px;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid var(--global-divider-color);
+    z-index: 0;
+  }
+
+  // OpenStreetMap only serves light tiles, so darken them in dark mode
+  html[data-theme="dark"] & .leaflet-tile-pane {
+    filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);
+  }
+
+  .travel-map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+$travel-home-color: var(--global-theme-color);
+$travel-conference-color: #e8710a;
+$travel-fun-color: #1e9e5a;
+
+.travel-dot {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  margin-right: 0.35rem;
+}
+
+.travel-dot-home {
+  background-color: $travel-home-color;
+}
+
+.travel-dot-conference {
+  background-color: $travel-conference-color;
+}
+
+.travel-dot-fun {
+  background-color: $travel-fun-color;
+}
+
+.travel-marker {
+  fill-opacity: 0.85;
+  stroke: white;
+}
+
+.travel-marker-home {
+  fill: $travel-home-color;
+}
+
+.travel-marker-conference {
+  fill: $travel-conference-color;
+}
+
+.travel-marker-fun {
+  fill: $travel-fun-color;
+}
+
+.travel-tooltip {
+  position: fixed;
+  z-index: 1100; // above the navbar
+  max-width: calc(100vw - 16px);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  background-color: var(--global-bg-color);
+  color: var(--global-text-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  &[hidden] {
+    display: none;
+  }
+
+  .travel-place {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    white-space: nowrap;
+  }
+
+  .travel-date {
+    color: var(--global-text-color-light);
+    font-size: 0.8em;
+  }
+}
+
+// Anime suggestions (hover over "anime" on the About page)
+
+.anime-hover {
+  position: relative;
+  color: var(--global-theme-color);
+  border-bottom: 1px dashed var(--global-theme-color);
+  cursor: pointer;
+
+  // Opens below the word; the outer span's top padding bridges the gap so the pointer
+  // can move onto the list, and the inner box scrolls when the list is long.
+  .anime-hover-list {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1100;
+    padding-top: 8px;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      opacity 0.15s ease,
+      visibility 0.15s ease;
+  }
+
+  .anime-hover-box {
+    display: block;
+    width: max-content;
+    max-width: min(320px, calc(100vw - 32px));
+    max-height: min(50vh, 360px);
+    overflow-y: auto;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: left;
+    color: var(--global-text-color);
+    background-color: var(--global-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:hover .anime-hover-list,
+  &:focus .anime-hover-list,
+  &:focus-within .anime-hover-list {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .anime-hover-heading {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  .anime-hover-item {
+    display: block;
+  }
+
+  .anime-hover-note {
+    color: var(--global-text-color-light);
+  }
 }

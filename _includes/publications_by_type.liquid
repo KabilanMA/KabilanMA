@@ -1,0 +1,32 @@
+{% comment %}
+  Publications from _bibliography/papers.bib, grouped by the `pubtype` field.
+  Used by _pages/publications.md and the CV (_layouts/cv.liquid).
+  Parameters:
+    exclude: comma-separated pubtypes to skip (e.g. "abstract")
+    only: comma-separated pubtypes to show; all others are skipped
+    heading_tag: tag for the group headings (default h1)
+{% endcomment %}
+{% assign pub_sections = 'conference:Conferences,workshop:Workshops,journal:Journal Articles,abstract:Talk Abstracts' | split: ',' %}
+{% assign pub_exclude = include.exclude | default: '' | split: ',' %}
+{% assign pub_only = include.only | default: '' | split: ',' %}
+{% assign pub_heading_tag = include.heading_tag | default: 'h1' %}
+<div class="publications">
+  {% for section in pub_sections %}
+    {% assign pubtype = section | split: ':' | first %}
+    {% assign heading = section | split: ':' | last %}
+    {% if pub_exclude contains pubtype %}
+      {% continue %}
+    {% endif %}
+    {% if pub_only.size > 0 %}
+      {% unless pub_only contains pubtype %}
+        {% continue %}
+      {% endunless %}
+    {% endif %}
+    {% capture count %}{% bibliography_count --query @*[pubtype={{ pubtype }}] %}{% endcapture %}
+    {% assign count = count | strip | plus: 0 %}
+    {% if count > 0 %}
+      <{{ pub_heading_tag }}>{{ heading }}</{{ pub_heading_tag }}>
+      {% bibliography --query @*[pubtype={{ pubtype }}] %}
+    {% endif %}
+  {% endfor %}
+</div>

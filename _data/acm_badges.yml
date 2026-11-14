@@ -1,0 +1,13 @@
+# ACM artifact badges, referenced from the `acm_badges` field in _bibliography/papers.bib
+# (comma-separated keys, e.g. `acm_badges = {available, functional, reproduced}`).
+# See https://www.acm.org/publications/policies/artifact-review-and-badging-current
+
+available:
+  name: Artifacts Available
+  image: /assets/img/acm_badges/artifacts_available_dl.png
+functional:
+  name: Artifacts Evaluated - Functional
+  image: /assets/img/acm_badges/artifacts_evaluated_functional_dl.png
+reproduced:
+  name: Results Reproduced
+  image: /assets/img/acm_badges/results_reproduced_dl.png

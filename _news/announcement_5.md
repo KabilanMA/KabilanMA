@@ -6,7 +6,7 @@ inline: false
 related_posts: false
 ---
 
-Presented the paper [BugsInKube: A Collection of Reconciliation Bugs](/../assets/pdf/BugsInKube.pdf) at APSEC 2024.
+Presented the paper [BugsInKube: A Collection of Reconciliation Bugs](/assets/pdf/BugsInKube.pdf) at APSEC 2024.
 
 ---
 
